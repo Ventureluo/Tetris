@@ -89,6 +89,7 @@ Block& Block::operator=(const Block& other)
 	return *this;
 }
 
+//检测方块是否处于合法位置
 bool Block::blockInMap(const vector<vector<int>>& map)
 {
 	int rows = map.size();
@@ -101,6 +102,7 @@ bool Block::blockInMap(const vector<vector<int>>& map)
 	}
 }
 
+//固化到map中
 void Block::solidify(vector<vector<int>>& map)
 {
 	for (int i = 0; i < 4; i++) {
